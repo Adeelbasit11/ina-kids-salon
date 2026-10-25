@@ -70,17 +70,19 @@ export default function WhyChooseUsSection() {
 
           {/* RIGHT — Text */}
           <div style={{ order: 1 }} className="why-text-col">
-            <FadeUp><span className="eyebrow">Why Choose Us</span></FadeUp>
-            <FadeUp delay={100}>
-              <h2 className="heading-section" style={{ fontSize: 'clamp(1.75rem, 4vw, 3rem)', color: '#171717', marginTop: '0.75rem' }}>
-                Little Clients Deserve <span className="text-gradient-pink">Special Care</span>
-              </h2>
-            </FadeUp>
-            <FadeUp delay={200}>
-              <p style={{ marginTop: '1rem', color: '#737373', fontSize: '1.0625rem', lineHeight: 1.7 }}>
-                Every hairstyle is an opportunity to create a look that feels special — just for them.
-              </p>
-            </FadeUp>
+            <div className="why-header-wrap">
+              <FadeUp><span className="eyebrow why-eyebrow">Why Choose Us</span></FadeUp>
+              <FadeUp delay={100}>
+                <h2 className="heading-section why-heading" style={{ fontSize: 'clamp(1.75rem, 4vw, 3rem)', color: '#171717', marginTop: '0.75rem' }}>
+                  Little Clients Deserve <span className="text-gradient-pink">Special Care</span>
+                </h2>
+              </FadeUp>
+              <FadeUp delay={200}>
+                <p className="why-desc" style={{ marginTop: '1rem', color: '#737373', fontSize: '1.0625rem', lineHeight: 1.7 }}>
+                  Every hairstyle is an opportunity to create a look that feels special — just for them.
+                </p>
+              </FadeUp>
+            </div>
 
             {/* Divider */}
             <FadeUp delay={250}>
@@ -96,7 +98,7 @@ export default function WhyChooseUsSection() {
             </div>
 
             <FadeUp delay={600}>
-              <div style={{ marginTop: '2.5rem' }}>
+              <div className="why-cta-wrap" style={{ marginTop: '2.5rem' }}>
                 <a href="#contact" onClick={(e) => { e.preventDefault(); smoothTo('#contact'); }} className="btn-primary">
                   Book an Appointment
                 </a>
@@ -109,10 +111,66 @@ export default function WhyChooseUsSection() {
         .why-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; align-items: center; }
         .why-image-col { order: 2; }
         .why-text-col  { order: 1; }
+
+        /* Mobile centered alignment */
+        .why-header-wrap {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .why-eyebrow {
+          text-align: center;
+          margin: 0 auto;
+        }
+        .why-heading {
+          text-align: center;
+        }
+        .why-desc {
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 32rem;
+        }
+        .why-cta-wrap {
+          display: flex;
+          justify-content: center;
+        }
+        .why-cta-wrap a {
+          width: 100%;
+          max-width: 18rem;
+          justify-content: center;
+        }
+
+        /* Desktop alignment */
         @media (min-width: 1024px) {
           .why-grid { grid-template-columns: 1fr 1fr; gap: 5rem; }
           .why-image-col { order: 1; }
           .why-text-col  { order: 2; }
+
+          .why-header-wrap {
+            text-align: left;
+            align-items: flex-start;
+          }
+          .why-eyebrow {
+            text-align: left;
+            margin: 0;
+          }
+          .why-heading {
+            text-align: left;
+          }
+          .why-desc {
+            text-align: left;
+            margin-left: 0;
+            margin-right: 0;
+          }
+          .why-cta-wrap {
+            justify-content: flex-start;
+          }
+          .why-cta-wrap a {
+            width: auto;
+            max-width: none;
+          }
         }
       `}</style>
     </section>

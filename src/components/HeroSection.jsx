@@ -28,9 +28,9 @@ export default function HeroSection() {
       <div className="container-main" style={{ width: '100%', padding: '3rem 1rem' }}>
         <div className="hero-grid">
           {/* LEFT — Text */}
-          <div className="hero-text" style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div className="hero-text">
             {/* Eyebrow */}
-            <div className="animate-fadeInUp stagger-1" style={{ animationFillMode: 'forwards', opacity: 0 }}>
+            <div className="animate-fadeInUp stagger-1 hero-eyebrow-wrap" style={{ animationFillMode: 'forwards', opacity: 0 }}>
               <span className="eyebrow" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
                 <span style={{ width: '1.5rem', height: '1px', background: '#E91E63', display: 'inline-block' }}/>
                 Little Looks, Big Personality
@@ -39,18 +39,18 @@ export default function HeroSection() {
             </div>
 
             {/* Headline */}
-            <h1 className="heading-display animate-fadeInUp stagger-2" style={{ animationFillMode: 'forwards', opacity: 0, marginTop: '1.25rem', color: '#171717', fontSize: 'clamp(2.25rem, 5vw, 4rem)' }}>
+            <h1 className="heading-display animate-fadeInUp stagger-2 hero-headline" style={{ animationFillMode: 'forwards', opacity: 0, marginTop: '1.25rem', color: '#171717', fontSize: 'clamp(2.25rem, 5vw, 4rem)' }}>
               <span style={{ display: 'block' }}>Little Styles.</span>
               <span style={{ display: 'block', marginTop: '0.25rem' }} className="text-gradient-pink">Big Smiles.</span>
             </h1>
 
             {/* Body copy */}
-            <p className="animate-fadeInUp stagger-3" style={{ animationFillMode: 'forwards', opacity: 0, marginTop: '1.5rem', color: '#737373', fontSize: '1.0625rem', lineHeight: 1.75, maxWidth: '26rem' }}>
+            <p className="animate-fadeInUp stagger-3 hero-p" style={{ animationFillMode: 'forwards', opacity: 0, marginTop: '1.5rem', color: '#737373', fontSize: '1.0625rem', lineHeight: 1.75, maxWidth: '26rem' }}>
               Beautiful braids, creative hairstyles, and special salon moments for your little ones.
             </p>
 
             {/* CTAs */}
-            <div className="animate-fadeInUp stagger-4" style={{ animationFillMode: 'forwards', opacity: 0, marginTop: '2rem', display: 'flex', flexWrap: 'wrap', gap: '1rem' }}>
+            <div className="animate-fadeInUp stagger-4 hero-ctas" style={{ animationFillMode: 'forwards', opacity: 0, marginTop: '2rem' }}>
               <a href="#contact" onClick={(e) => { e.preventDefault(); smoothTo('#contact'); }}
                 className="btn-primary" style={{ fontSize: '1rem', padding: '1rem 1.75rem', boxShadow: '0 8px 24px #E91E6330' }}>
                 Book an Appointment <ArrowRight size={17}/>
@@ -62,9 +62,9 @@ export default function HeroSection() {
             </div>
 
             {/* Location badge */}
-            <div className="animate-fadeInUp stagger-5" style={{ animationFillMode: 'forwards', opacity: 0, marginTop: '3rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+            <div className="animate-fadeInUp stagger-5 hero-location" style={{ animationFillMode: 'forwards', opacity: 0, marginTop: '2.5rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
               <BraidDecor/>
-              <div>
+              <div style={{ textAlign: 'left' }}>
                 <p style={{ fontFamily: 'var(--font-heading)', fontWeight: 600, fontSize: '0.875rem', color: '#171717' }}>Jewel Complex, 2nd Floor, Room 219</p>
                 <p style={{ fontSize: '0.75rem', color: '#737373', marginTop: '2px' }}>Next to TRM · Nairobi</p>
               </div>
@@ -136,16 +136,89 @@ export default function HeroSection() {
         .hero-grid {
           display: grid;
           grid-template-columns: 1fr;
-          gap: 3rem;
+          gap: 2.5rem;
           align-items: center;
           min-height: calc(100vh - 80px);
         }
+        .hero-text {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+        }
+        .hero-eyebrow-wrap {
+          display: flex;
+          justify-content: center;
+          width: 100%;
+        }
+        .hero-headline {
+          text-align: center;
+        }
+        .hero-p {
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .hero-ctas {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          gap: 0.875rem;
+        }
+        .hero-ctas a {
+          width: 100%;
+          max-width: 18rem;
+          justify-content: center;
+        }
+        .hero-location {
+          justify-content: center;
+          width: 100%;
+        }
         .hero-image { order: -1; }
+
+        @media (min-width: 640px) {
+          .hero-ctas {
+            flex-direction: row;
+            flex-wrap: wrap;
+          }
+          .hero-ctas a {
+            width: auto;
+            max-width: none;
+          }
+        }
+
         @media (min-width: 1024px) {
           .hero-grid { grid-template-columns: 1fr 1fr; gap: 4rem; }
-          .hero-text  { order: 0; }
+          .hero-text {
+            order: 0;
+            align-items: flex-start;
+            text-align: left;
+          }
+          .hero-eyebrow-wrap {
+            justify-content: flex-start;
+          }
+          .hero-headline {
+            text-align: left;
+          }
+          .hero-p {
+            text-align: left;
+            margin-left: 0;
+            margin-right: 0;
+          }
+          .hero-ctas {
+            justify-content: flex-start;
+            align-items: flex-start;
+            width: auto;
+          }
+          .hero-location {
+            justify-content: flex-start;
+          }
           .hero-image { order: 0; }
         }
+
         @keyframes bounceY {
           0%, 100% { transform: translateY(0); }
           50%       { transform: translateY(6px); }

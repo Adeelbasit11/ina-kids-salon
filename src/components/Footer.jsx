@@ -32,7 +32,15 @@ const LogoMark = () => (
   <img
     src="/images/ina-logo-circle.png"
     alt="INA Kids Salon Logo"
-    style={{ width: 38, height: 38, borderRadius: '9999px', objectFit: 'cover', border: '2px solid #E91E63', flexShrink: 0 }}
+    style={{
+      width: 40,
+      height: 40,
+      borderRadius: '9999px',
+      objectFit: 'contain',
+      flexShrink: 0,
+      display: 'block',
+      boxShadow: '0 2px 10px rgba(233, 30, 99, 0.28)',
+    }}
   />
 );
 
