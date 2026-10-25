@@ -6,7 +6,7 @@ const PHONE_HREF = 'tel:+254757380607';
 
 const NAV_LINKS = [
   { label: 'Home',          href: '#home' },
-  { label: 'Hairstyles',    href: '#hairstyles' },
+  { label: 'Our Services',  href: '#services' },
   { label: 'Why Choose Us', href: '#why-us' },
   { label: 'Gallery',       href: '#gallery' },
   { label: 'Contact',       href: '#contact' },

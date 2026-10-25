@@ -45,8 +45,8 @@ export default function WhyChooseUsSection() {
             <div aria-hidden="true" style={{ position: 'absolute', inset: '-1rem', background: '#E91E63', borderRadius: '1.5rem', opacity: 0.06 }}/>
             <FadeUp>
               <div className="img-zoom" style={{ borderRadius: '1.5rem', overflow: 'hidden', boxShadow: '0 24px 60px rgba(0,0,0,0.15)', aspectRatio: '4/5' }}>
-                <img src="/images/salon-chair-styling.png"
-                  alt="INA Kids Salon stylist creating neat braided cornrows on a child client"
+                <img src="/images/suite-why-us-salon.jpg"
+                  alt="Child enjoying a comfortable hairstyling session at INA Kids Salon"
                   style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy"/>
                 <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to top, rgba(0,0,0,0.25), transparent)' }}/>
               </div>

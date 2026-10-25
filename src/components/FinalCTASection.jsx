@@ -35,7 +35,7 @@ export default function FinalCTASection() {
       {/* Background image with overlay */}
       <div className="absolute inset-0" aria-hidden="true">
         <img
-          src="/images/service-beaded.jpg"
+          src="/images/suite-booking-child.jpg"
           alt=""
           className="w-full h-full object-cover opacity-20"
           loading="lazy"

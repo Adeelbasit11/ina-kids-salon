@@ -16,12 +16,6 @@ const BraidDecor = () => (
   </svg>
 );
 
-const TikTokIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="white" aria-hidden="true">
-    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.96a8.2 8.2 0 004.79 1.53V7.04a4.84 4.84 0 01-1.02-.35z"/>
-  </svg>
-);
-
 export default function HeroSection() {
   return (
     <section id="home" aria-label="Hero section" style={{ position: 'relative', minHeight: '100vh', background: '#FFF1F6', overflow: 'hidden', display: 'flex', alignItems: 'center', paddingTop: '80px' }}>
@@ -61,9 +55,9 @@ export default function HeroSection() {
                 className="btn-primary" style={{ fontSize: '1rem', padding: '1rem 1.75rem', boxShadow: '0 8px 24px #E91E6330' }}>
                 Book an Appointment <ArrowRight size={17}/>
               </a>
-              <a href="#hairstyles" onClick={(e) => { e.preventDefault(); smoothTo('#hairstyles'); }}
+              <a href="#services" onClick={(e) => { e.preventDefault(); smoothTo('#services'); }}
                 className="btn-secondary" style={{ fontSize: '1rem', padding: '1rem 1.75rem' }}>
-                Explore Hairstyles
+                Our Services
               </a>
             </div>
 
@@ -79,13 +73,13 @@ export default function HeroSection() {
 
           {/* RIGHT — Image */}
           <div className="hero-image" style={{ position: 'relative', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            <div className="animate-scaleIn stagger-2" style={{ animationFillMode: 'forwards', opacity: 0, position: 'relative', width: '100%', maxWidth: '22rem' }}>
+            <div className="animate-scaleIn stagger-2" style={{ animationFillMode: 'forwards', opacity: 0, position: 'relative', width: '100%', maxWidth: '23rem' }}>
               {/* Pink accent behind image */}
               <div aria-hidden="true" style={{ position: 'absolute', inset: 0, top: '-1.5rem', right: '-1.5rem', background: '#E91E63', borderRadius: '1.5rem', opacity: 0.08 }}/>
 
               {/* Main image */}
               <div className="img-zoom" style={{ borderRadius: '1.5rem', overflow: 'hidden', boxShadow: '0 24px 60px rgba(0,0,0,0.18)', aspectRatio: '3/4' }}>
-                <img src="/images/hero-braids-child.jpg"
+                <img src="/images/suite-hero-main.jpg"
                   alt="Young girl with an exquisite braided cornrow hairstyle at INA Kids Salon"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                   loading="eager" fetchPriority="high"/>
@@ -103,7 +97,7 @@ export default function HeroSection() {
               {/* TikTok badge */}
               <div className="animate-slideInRight stagger-5" style={{ animationFillMode: 'forwards', opacity: 0, position: 'absolute', top: '-1rem', right: '-1rem', background: '#fff', borderRadius: '1rem', boxShadow: '0 8px 32px rgba(0,0,0,0.12)', border: '1px solid #F0DDE5', padding: '0.75rem 1rem' }}>
                 <a href="https://www.tiktok.com/@ina.kids.salon" target="_blank" rel="noopener noreferrer"
-                  style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', textDecoration: 'none' }}
+                  style={{ display: 'flex', alignItems: 'center', gap: '0.625rem', textDecoration: 'none' }}
                   aria-label="Follow INA Kids Salon on TikTok">
                   <div style={{ width: 34, height: 34, borderRadius: '9999px', overflow: 'hidden', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
                     <img src="/images/ina-logo-circle.png" alt="INA TikTok" style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
@@ -117,8 +111,8 @@ export default function HeroSection() {
 
               {/* Supporting image tile */}
               <div className="animate-slideInLeft stagger-6" style={{ animationFillMode: 'forwards', opacity: 0, position: 'absolute', bottom: '-1.5rem', left: '-2rem', width: '7.5rem', height: '7.5rem', borderRadius: '1rem', overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.15)', border: '4px solid #fff' }}>
-                <img src="/images/style-beaded-sisters.png"
-                  alt="INA Kids Salon sisters with beaded hairstyles" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy"/>
+                <img src="/images/suite-hero-tile.jpg"
+                  alt="Child with beaded braids smiling" style={{ width: '100%', height: '100%', objectFit: 'cover' }} loading="lazy"/>
               </div>
             </div>
 

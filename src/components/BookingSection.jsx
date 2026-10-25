@@ -95,7 +95,7 @@ export default function BookingSection() {
             <RevealWrapper delay={400} className="mt-8">
               <div className="rounded-2xl overflow-hidden shadow-lg aspect-video img-zoom">
                 <img
-                  src="/images/style-cornrows-pose.png"
+                  src="/images/suite-booking-child.jpg"
                   alt="Happy child showing off their new hairstyle at INA Kids Salon"
                   className="w-full h-full object-cover"
                   loading="lazy"

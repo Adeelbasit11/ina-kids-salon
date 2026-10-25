@@ -136,12 +136,12 @@ export default function LocationSection() {
             </RevealWrapper>
           </div>
 
-          {/* RIGHT — Authentic Salon Photo */}
+          {/* RIGHT — Photo / Map placeholder */}
           <RevealWrapper delay={200} className="relative">
             <div className="rounded-3xl overflow-hidden shadow-2xl h-full min-h-64 img-zoom">
               <img
-                src="/images/salon-styling-ina.png"
-                alt="Stylist working on a client inside INA Kids Salon at Jewel Complex"
+                src="/images/suite-location-salon.jpg"
+                alt="INA Kids Salon — warm and welcoming salon environment"
                 className="w-full h-full object-cover"
                 loading="lazy"
               />

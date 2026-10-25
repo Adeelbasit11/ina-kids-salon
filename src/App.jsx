@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
-import HairstylesSection from './components/HairstylesSection';
+import ServicesSection from './components/ServicesSection';
 import WhyChooseUsSection from './components/WhyChooseUsSection';
 import GallerySection from './components/GallerySection';
 import BookingSection from './components/BookingSection';
@@ -9,6 +9,7 @@ import LocationSection from './components/LocationSection';
 import FinalCTASection from './components/FinalCTASection';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 export default function App() {
   return (
@@ -29,8 +30,8 @@ export default function App() {
         {/* Section 1 — Hero */}
         <HeroSection />
 
-        {/* Section 2 — Popular Hairstyles & Services */}
-        <HairstylesSection />
+        {/* Section 2 — Our Services (3 Specialized Cards) */}
+        <ServicesSection />
 
         {/* Section 3 — Why Choose Us */}
         <WhyChooseUsSection />
@@ -50,6 +51,7 @@ export default function App() {
 
       <Footer />
       <BackToTop />
+      <FloatingWhatsApp />
     </>
   );
 }
